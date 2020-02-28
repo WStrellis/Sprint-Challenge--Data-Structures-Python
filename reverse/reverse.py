@@ -49,11 +49,13 @@ class LinkedList:
         prev = None
         current = self.head
         next = current.get_next()
-        while next:
+        while True:
             # set current.next to previous
             current.set_next(prev)
             prev = current
             current = next
-            if current.get_next() == None:
-                self.head = current
             next = current.get_next()
+            if not next:
+                self.head = current
+                self.head.set_next(prev)
+                break
