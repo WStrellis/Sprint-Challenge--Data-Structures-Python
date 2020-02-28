@@ -1,4 +1,5 @@
 import time
+from doubly_linked_list_modified import DoublyLinkedListMod
 from doubly_linked_list import DoublyLinkedList
 
 start_time = time.time()
@@ -12,7 +13,7 @@ names_2 = f.read().split("\n")  # List containing 10000 names O(n)
 f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
-dll = DoublyLinkedList()
+dll = DoublyLinkedListMod()
 # Replace the nested for loops below with your improvements
 
 for name in names_1:
